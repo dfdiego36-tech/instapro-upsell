@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Pro - Finalizar Acesso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030305; /* Fundo extremamente escuro */
+            color: #ffffff;
+            /* Um padrão sutil de fundo para imitar o ruído digital escuro da imagem original */
+            background-image: radial-gradient(circle at 50% 0%, #1e103c 0%, transparent 40%), 
+                              radial-gradient(circle at 50% 100%, #100826 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background-color: #09090c;
+            border: 1px solid #1f1f2e;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+        }
+
+        .glow-card {
+            background-color: #09090c;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            box-shadow: 0 0 30px -10px rgba(139, 92, 246, 0.15);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+            transform: scale(1.02);
+        }
+        
+        /* Faixa de progresso animada */
+        @keyframes loading {
+            0% { width: 0; }
+            100% { width: 35%; }
+        }
+        .animate-progress {
+            animation: loading 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center overflow-x-hidden pb-12">
+
+    <!-- Faixa de Alerta Superior -->
+    <div class="w-full bg-[#b91c1c] text-center py-3 px-4 shadow-lg z-50">
+        <div class="max-w-2xl mx-auto flex flex-col items-center justify-center">
+            <p class="font-bold text-sm md:text-base text-white flex items-center gap-2">
+                <span class="text-lg">⚠️</span> Atenção, não saia dessa página!
+            </p>
+            <p class="text-xs md:text-sm text-red-100 mt-0.5 font-medium">Sua compra ainda não foi 100% concluída</p>
+        </div>
+    </div>
+
+    <!-- Container Principal -->
+    <main class="w-full max-w-lg px-4 pt-10 flex flex-col items-center gap-8 relative z-10">
+
+        <!-- Logo e Barra de Progresso -->
+        <div class="flex flex-col items-center gap-5 w-full">
+            <div class="flex flex-col items-center">
+                <!-- Ícone da Logo -->
+                <img src="imagem produto 2.png" alt="Insta Pro Logo" class="w-14 h-14 rounded-2xl mb-2 shadow-lg object-cover">
+                <h1 class="text-2xl font-black tracking-[0.2em] text-white">INSTA <span class="text-purple-500">PRO</span></h1>
+            </div>
+
+            <!-- Barra de Progresso -->
+            <div class="w-48 h-2 bg-gray-800/80 rounded-full overflow-hidden shadow-inner">
+                <div class="h-full bg-purple-500 rounded-full shadow-[0_0_10px_#a855f7] animate-progress" style="width: 35%;"></div>
+            </div>
+        </div>
+
+        <!-- Card 1: Parabéns -->
+        <div class="w-full glow-card rounded-[2rem] p-6 md:p-8 flex flex-col items-center text-center relative mt-2">
+            <h2 class="text-3xl font-bold text-purple-400 mb-3 flex items-center justify-center gap-2">
+                Parabéns! <span class="text-2xl">🎉</span>
+            </h2>
+            
+            <p class="text-gray-300 text-[17px] md:text-lg mb-6 font-medium leading-snug">
+                Seu acesso ao <span class="text-purple-400 font-bold">Insta Pro</span><br>está quase concluído!
+            </p>
+            
+            <p class="text-gray-400 text-sm md:text-[15px] mb-6 leading-relaxed max-w-sm">
+                Para garantir <strong class="text-gray-200 font-semibold">total sigilo da sua identidade</strong>, é necessário realizar um pagamento único de uma pequena taxa de <strong class="text-purple-400 font-semibold">Firewall & Sigilo</strong>.
+            </p>
+            
+            <!-- Caixa de Alerta Amarela -->
+            <div class="w-full bg-[#2a1c0d]/40 border border-yellow-600/30 rounded-2xl p-4 text-left flex gap-3 shadow-inner">
+                <div class="text-yellow-500 shrink-0 mt-0.5 text-lg">⚠️</div>
+                <p class="text-yellow-500/90 text-xs md:text-[13px] leading-relaxed">
+                    <strong class="text-yellow-500">Ativação obrigatória:</strong> sem essa taxa, o instagram pode notificar seu cônjuge que está sendo monitorado e expor sua identidade por medidas de segurança.
+                </p>
+            </div>
+        </div>
+
+        <!-- Texto de Transição -->
+        <div class="text-center px-4">
+            <h3 class="text-xl md:text-[22px] font-semibold text-gray-200 leading-snug">
+                Ative o <span class="text-purple-400 font-bold">Firewall</span> e acesse<br>
+                o <span class="text-purple-400 font-bold">Instagram</span> agora mesmo!
+            </h3>
+        </div>
+
+        <!-- Card 2: Oferta Especial -->
+        <div class="w-full glow-card border-purple-900/40 rounded-[2rem] p-6 md:p-8 relative">
+            <!-- Badge Limitado -->
+            <div class="absolute -top-3 right-6 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+                Limitado
+            </div>
+            
+            <h3 class="text-2xl font-bold text-center text-white mb-6 flex justify-center items-center gap-2">
+                Oferta Especial <span class="text-xl">🔥</span>
+            </h3>
+            
+            <!-- Lista de Benefícios -->
+            <ul class="flex flex-col gap-3 mb-8">
+                <li class="flex items-center gap-3 bg-[#13131c] border border-gray-800/60 p-3.5 rounded-xl">
+                    <svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <span class="text-gray-300 text-sm font-medium">Proteção total dos seus dados e identidade</span>
+                </li>
+                <li class="flex items-center gap-3 bg-[#13131c] border border-gray-800/60 p-3.5 rounded-xl">
+                    <svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <span class="text-gray-300 text-sm font-medium">100% de sigilo na investigação</span>
+                </li>
+                <li class="flex items-center gap-3 bg-[#13131c] border border-gray-800/60 p-3.5 rounded-xl">
+                    <svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <span class="text-gray-300 text-sm font-medium">Liberação de backups automáticos</span>
+                </li>
+                <li class="flex items-center gap-3 bg-[#13131c] border border-gray-800/60 p-3.5 rounded-xl">
+                    <svg class="w-5 h-5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <span class="text-gray-300 text-sm font-medium">Firewall ativo por 1 ano após o pagamento</span>
+                </li>
+            </ul>
+
+            <!-- Box de Preço -->
+            <div class="bg-[#0a0a0f] border border-gray-800/80 rounded-2xl p-5 flex flex-col items-center mb-6 shadow-inner relative overflow-hidden">
+                <!-- Efeito de brilho interno sutil -->
+                <div class="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent pointer-events-none"></div>
+
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="text-gray-500 line-through text-sm font-medium">R$ 197,00</span>
+                    <span class="bg-purple-900/40 text-purple-400 border border-purple-500/30 text-[11px] px-2 py-0.5 rounded-md font-bold">R$100 OFF</span>
+                </div>
+                <div class="text-[2.75rem] font-black text-white flex items-start gap-1 leading-none tracking-tight">
+                    <span class="text-xl mt-2 text-purple-400">R$</span>97<span class="text-xl mt-2">,00</span>
+                </div>
+                <span class="text-gray-500 text-xs mt-2 font-medium">Pagamento único</span>
+            </div>
+
+            <!-- Botão de Ação -->
+            <button class="w-full btn-gradient text-white rounded-[1.25rem] py-4 flex flex-col items-center justify-center gap-1">
+                <div class="flex items-center gap-2 font-bold text-[17px] md:text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    Proteger meus dados e sigilo
+                </div>
+                <span class="text-xs text-white/80 font-medium">E acessar o instagram agora mesmo</span>
+            </button>
+        </div>
+
+        <!-- Card 3: FAQ -->
+        <div class="w-full glass-card rounded-[2rem] p-6 md:p-8">
+            <h3 class="text-xl font-bold text-center text-white mb-6">Perguntas Frequentes</h3>
+            
+            <div class="flex flex-col gap-3">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item rounded-xl overflow-hidden bg-[#13131c] border border-gray-800/60">
+                    <button class="faq-button w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-[#1a1a26]">
+                        <span class="text-gray-300 text-sm font-medium">Preciso fazer outro pagamento?</span>
+                        <span class="icon text-purple-500 text-xl font-light leading-none">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-4 text-sm text-gray-400">
+                        Essa taxa é separada da compra inicial. Ela serve exclusivamente para ativar os servidores criptografados, garantir o modo invisível e liberar os backups automáticos com sigilo total.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item rounded-xl overflow-hidden bg-[#13131c] border border-gray-800/60">
+                    <button class="faq-button w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-[#1a1a26]">
+                        <span class="text-gray-300 text-sm font-medium">Aparece o nome do app na cobrança?</span>
+                        <span class="icon text-purple-500 text-xl font-light leading-none">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-4 text-sm text-gray-400">
+                        Não. A cobrança aparece com um nome discreto e genérico para proteger sua privacidade.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item rounded-xl overflow-hidden bg-[#13131c] border border-gray-800/60">
+                    <button class="faq-button w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-[#1a1a26]">
+                        <span class="text-gray-300 text-sm font-medium">Essa taxa é realmente obrigatória?</span>
+                        <span class="icon text-purple-500 text-xl font-light leading-none">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-4 text-sm text-gray-400">
+                        Sim. Sem ela, o sistema não pode ativar os protocolos de segurança e privacidade, o que compromete todo o funcionamento.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item rounded-xl overflow-hidden bg-[#13131c] border border-gray-800/60">
+                    <button class="faq-button w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-[#1a1a26]">
+                        <span class="text-gray-300 text-sm font-medium">Posso usar o app sem ativar o firewall?</span>
+                        <span class="icon text-purple-500 text-xl font-light leading-none">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-4 text-sm text-gray-400">
+                        Não. A ativação do firewall é necessária para liberar o acesso completo e garantir o sigilo das operações.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-4 text-center text-xs text-gray-600 flex flex-col items-center gap-3 w-full pb-8">
+            <div class="flex items-center gap-2 opacity-50">
+                <img src="imagem produto 2.png" alt="Insta Pro Logo" class="w-5 h-5 rounded-md object-cover">
+                <span class="font-bold tracking-widest text-[10px]">INSTA PRO</span>
+            </div>
+            <p>© 2025 Insta Pro — Todos os direitos reservados.®</p>
+            <div class="flex gap-4 mt-1 font-medium">
+                <a href="#" class="hover:text-gray-400 transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-gray-400 transition-colors">Política de Privacidade</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Script para Accordion (Perguntas Frequentes) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('.icon');
+                    const isHidden = answer.classList.contains('hidden');
+                    
+                    // Fecha todos os outros abertos
+                    document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('.faq-button .icon').forEach(el => el.textContent = '+');
+                    document.querySelectorAll('.faq-button').forEach(el => el.classList.remove('border-b', 'border-white', 'bg-[#1a1a26]'));
+
+                    if (isHidden) {
+                        answer.classList.remove('hidden');
+                        icon.innerHTML = '&times;'; // Sinal de X (multiplicação HTML)
+                        button.classList.add('bg-[#1a1a26]', 'border-b', 'border-white');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
